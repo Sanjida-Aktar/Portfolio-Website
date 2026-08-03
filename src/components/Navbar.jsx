@@ -23,7 +23,6 @@ export default function Navbar() {
           Sanjida<span className="text-cyan-400">.</span>
         </a>
 
-        {/* Desktop Menu */}
         <div className="hidden items-center gap-8 md:flex">
           {links.map((link) => (
             <a
@@ -43,7 +42,6 @@ export default function Navbar() {
           Let's Talk
         </a>
 
-        {/* Mobile Button */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           className="text-white md:hidden"
