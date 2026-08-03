@@ -19,7 +19,7 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 z-50 w-full border-b border-white/10 bg-[#050816]/80 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
 
-        <a href="#home" className="text-2xl font-bold">
+        <a href="#home" className="text-3xl font-bold gradient-text">
           Sanjida<span className="text-cyan-400">.</span>
         </a>
 

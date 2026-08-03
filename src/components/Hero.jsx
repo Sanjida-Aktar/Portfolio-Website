@@ -1,5 +1,7 @@
-import { Github, Linkedin, Mail, ArrowDown } from "lucide-react";
-
+import { Mail, ArrowDown } from "lucide-react";
+import { FaGithub } from "react-icons/fa";
+import { IoLogoLinkedin } from "react-icons/io";
+import { MdEmail } from "react-icons/md";
 export default function Hero() {
   return (
     <section
@@ -9,7 +11,6 @@ export default function Hero() {
       <div className="glow-bg left-0 top-20" />
 
       <div className="mx-auto grid min-h-[80vh] max-w-7xl items-center gap-16 lg:grid-cols-2">
-
         {/* Left */}
         <div className="fade-up">
           <p className="mb-4 text-lg font-medium text-cyan-400">
@@ -18,21 +19,19 @@ export default function Hero() {
 
           <h1 className="text-5xl font-extrabold leading-tight sm:text-6xl lg:text-7xl">
             Sanjida
-            <br />
-            <span className="gradient-text">Aktar</span>
+            
+            <span className="gradient-text"> Aktar</span>
           </h1>
 
           <h2 className="mt-6 text-2xl font-semibold text-gray-200 sm:text-3xl">
             CSE Student &{" "}
-            <span className="text-cyan-400">
-              Aspiring Software Engineer
-            </span>
+            <span className="text-cyan-400">Aspiring Software Engineer</span>
           </h2>
 
           <p className="mt-6 max-w-xl text-lg leading-8 text-gray-400">
             A passionate Computer Science & Engineering student focused on
-            software development, web development and problem solving.
-            I love turning ideas into real-world digital experiences.
+            software development, web development and problem solving. I love
+            turning ideas into real-world digital experiences.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
@@ -45,34 +44,38 @@ export default function Hero() {
             </a>
           </div>
 
-          <div className="mt-8 flex gap-5">
-            <a
-              href="#"
-              className="text-gray-400 transition hover:text-cyan-400"
-            >
-              <Github size={24} />
-            </a>
+          <div className="mt-5 flex gap-5">
+            <div className="mt-5 flex gap-5">
+  <a
+    href="#"
+    className="text-gray-400 transition hover:text-cyan-400"
+  >
+    <FaGithub className="w-9 h-9 text-gray-400 transition hover:text-cyan-400" />
 
-            <a
-              href="#"
-              className="text-gray-400 transition hover:text-cyan-400"
-            >
-              <Linkedin size={24} />
-            </a>
+  </a>
 
-            <a
-              href="#contact"
-              className="text-gray-400 transition hover:text-cyan-400"
-            >
-              <Mail size={24} />
-            </a>
+  <a
+    href="#"
+    className="text-gray-400 transition hover:text-cyan-400"
+  >
+    <IoLogoLinkedin className="w-9 h-9 text-gray-400 transition hover:text-cyan-400"/>
+    
+  </a>
+
+  <a
+    href="#contact"
+    className="text-gray-400 transition hover:text-cyan-400"
+  >
+    <MdEmail className="w-9 h-9 text-gray-400 transition hover:text-cyan-400" />
+
+  </a>
+</div>
           </div>
         </div>
 
         {/* Right - Profile */}
         <div className="flex justify-center">
           <div className="profile-wrapper">
-
             <div className="profile-ring"></div>
 
             <img
@@ -82,7 +85,6 @@ export default function Hero() {
             />
 
             <div className="profile-light"></div>
-
           </div>
         </div>
       </div>
