@@ -1,8 +1,7 @@
 @import "tailwindcss";
 
-:root {
-  --background: #050816;
-  --foreground: #ffffff;
+* {
+  box-sizing: border-box;
 }
 
 html {
@@ -13,4 +12,247 @@ body {
   margin: 0;
   background: #050816;
   color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+::selection {
+  background: #22d3ee;
+  color: #050816;
+}
+
+/* =========================
+   COMMON
+========================= */
+
+.section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 24px;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-title span {
+  color: #22d3ee;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.section-title h2 {
+  margin-top: 10px;
+  font-size: 42px;
+  font-weight: 800;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #22d3ee, #8b5cf6, #ec4899);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* =========================
+   BACKGROUND
+========================= */
+
+.glow-bg {
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: #4f46e5;
+  filter: blur(180px);
+  opacity: 0.12;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 24px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #06b6d4, #6366f1);
+  color: white;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 35px rgba(34, 211, 238, 0.25);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 24px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: white;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-secondary:hover {
+  border-color: #22d3ee;
+  color: #22d3ee;
+  transform: translateY(-3px);
+}
+
+/* =========================
+   PROFILE GLOW
+========================= */
+
+.profile-wrapper {
+  position: relative;
+  width: 360px;
+  height: 360px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #22d3ee, #6366f1, #a855f7, #ec4899);
+  animation: rotateRing 8s linear infinite;
+}
+
+.profile-ring::after {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  border-radius: 50%;
+  background: #050816;
+}
+
+.profile-image {
+  position: relative;
+  z-index: 2;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #0b1024;
+  box-shadow:
+    0 0 30px rgba(34, 211, 238, 0.5),
+    0 0 80px rgba(139, 92, 246, 0.35);
+  animation: floating 4s ease-in-out infinite;
+}
+
+.profile-light {
+  position: absolute;
+  bottom: -30px;
+  width: 240px;
+  height: 70px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #22d3ee,
+    #8b5cf6,
+    #ec4899,
+    transparent
+  );
+  filter: blur(25px);
+  opacity: 0.65;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes floating {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes rotateRing {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  animation: fadeUp 0.8s ease forwards;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  border-radius: 18px;
+  transition: 0.3s;
+}
+
+.glass-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(34, 211, 238, 0.35);
+  box-shadow: 0 15px 50px rgba(34, 211, 238, 0.08);
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .section {
+    padding: 80px 20px;
+  }
+
+  .section-title h2 {
+    font-size: 32px;
+  }
+
+  .profile-wrapper {
+    width: 280px;
+    height: 280px;
+  }
+
+  .profile-image {
+    width: 230px;
+    height: 230px;
+  }
 }
