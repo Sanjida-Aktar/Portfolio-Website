@@ -1,8 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Download } from "lucide-react";
+import { useEffect, useState } from "react";
 import { profile } from "@/data/profile";
 
 const navLinks = [
@@ -94,7 +94,7 @@ export default function Navbar() {
           className="btn-secondary hidden !px-5 !py-2.5 text-xs lg:inline-flex"
         >
           Download CV
-          <Download className="h-4 w-4" />
+          <Download  className="h-4 w-4" />
         </a>
 
         <button
