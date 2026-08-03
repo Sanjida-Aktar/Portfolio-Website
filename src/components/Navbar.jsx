@@ -59,7 +59,7 @@ export default function Navbar() {
       <nav className="section-container flex h-16 items-center justify-between sm:h-20">
         <a
           href="#home"
-          className="font-display text-xl font-bold text-white sm:text-2xl"
+          className="font-display text-2xl font-bold text-white sm:text-3xl"
         >
           {profile.firstName}
           <span className="gradient-text">.</span>
@@ -70,7 +70,7 @@ export default function Navbar() {
             <li key={link.href}>
               <a
                 href={link.href}
-                className={`relative text-sm font-medium transition-colors duration-200 ${
+                className={`relative text-base font-medium transition-colors duration-200 ${
                   activeSection === link.href
                     ? "text-white"
                     : "text-slate-400 hover:text-slate-200"
@@ -123,7 +123,7 @@ export default function Navbar() {
                   <a
                     href={link.href}
                     onClick={() => setMenuOpen(false)}
-                    className={`block rounded-lg px-3 py-3 text-sm font-medium transition-colors ${
+                    className={`block rounded-lg px-3 py-3 text-base font-medium transition-colors ${
                       activeSection === link.href
                         ? "bg-white/5 text-cyan-glow"
                         : "text-slate-300 hover:bg-white/5"

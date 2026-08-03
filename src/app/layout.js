@@ -1,12 +1,15 @@
-import Navbar from "@/components/Navbar";
+import "./globals.css";
+
+export const metadata = {
+  title: "Sanjida Aktar | Portfolio",
+  description:
+    "Personal portfolio of Sanjida Aktar, CSE Student and Aspiring Software Engineer.",
+};
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="min-h-full flex flex-col">
-        <Navbar />
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
