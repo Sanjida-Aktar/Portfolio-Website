@@ -37,7 +37,7 @@ export default function Navbar() {
 
         <a
           href="#contact"
-          className="btn-primary hidden md:inline-flex"
+          className="!hidden lg:!inline-flex btn-primary"
         >
           Let's Talk
         </a>
