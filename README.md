@@ -1,36 +1,124 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ✨ Sanjida Aktar — Personal Portfolio
 
-## Getting Started
+<p align="center">
+  <img src="public/images/profile.png" alt="Sanjida Aktar" width="150" />
+</p>
 
-First, run the development server:
+<h3 align="center">
+  Modern Personal Portfolio Website
+</h3>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+<p align="center">
+  A modern, responsive and interactive developer portfolio built with Next.js, JavaScript, Tailwind CSS and Framer Motion.
+</p>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<p align="center">
+  <a href="YOUR_LIVE_DEMO_URL">🌐 Live Demo</a>
+  &nbsp; • &nbsp;
+  <a href="https://www.linkedin.com/in/swe-sanjida-aktar/">LinkedIn</a>
+  &nbsp; • &nbsp;
+  <a href="YOUR_GITHUB_URL">GitHub</a>
+</p>
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 👩‍💻 About The Project
 
-## Learn More
+This is my personal portfolio website designed to showcase my journey as a Computer Science & Engineering student and aspiring Software Engineer.
 
-To learn more about Next.js, take a look at the following resources:
+The website highlights my:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- 👩‍💻 Introduction
+- 🎓 Educational background
+- 🛠️ Technical skills
+- 🚀 Projects
+- 📚 Learning journey
+- 📩 Contact information
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The goal of this portfolio is to create a clean, modern and professional online presence while showcasing the technologies and projects I am currently working with.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## ✨ Features
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- 🎨 Modern dark-themed UI
+- 🌌 Neon cyan, blue and purple gradient design
+- 💫 Smooth animations and transitions
+- 🖼️ Glowing profile image effect
+- 📱 Fully responsive design
+- 🧊 Glassmorphism UI elements
+- 🚀 Project showcase section
+- 🛠️ Skills section with categorized technologies
+- 📚 Education & development journey timeline
+- 📩 Contact form
+- 🔗 Social media integration
+- 📄 Download CV button
+- ⚡ Smooth scrolling navigation
+- 📱 Responsive mobile navigation
+- 🎭 Interactive hover effects
+- ♿ Accessible and user-friendly interface
+
+---
+
+## 🛠️ Technologies Used
+
+### Frontend
+
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)
+
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38BDF8?style=for-the-badge&logo=tailwind-css&logoColor=white)
+
+### Animation & UI
+
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)
+
+### Tools
+
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
+
+![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+
+---
+
+## 📂 Project Structure
+
+```text
+portfolio/
+│
+├── app/
+│   ├── globals.css
+│   ├── layout.jsx
+│   └── page.jsx
+│
+├── components/
+│   ├── Navbar.jsx
+│   ├── Hero.jsx
+│   ├── About.jsx
+│   ├── Skills.jsx
+│   ├── Projects.jsx
+│   ├── Journey.jsx
+│   ├── Contact.jsx
+│   ├── Footer.jsx
+│   ├── ProjectCard.jsx
+│   ├── SkillCard.jsx
+│   └── SectionTitle.jsx
+│
+├── data/
+│   ├── projects.js
+│   └── skills.js
+│
+├── public/
+│   └── images/
+│       ├── profile.png
+│       └── projects/
+│
+├── package.json
+├── next.config.mjs
+├── postcss.config.mjs
+└── README.md
