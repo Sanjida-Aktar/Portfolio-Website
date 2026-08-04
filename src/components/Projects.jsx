@@ -1,76 +1,151 @@
+
+"use client";
+
+import { useEffect, useState } from "react";
+
 const projects = [
+  {
+    title: "Portfolio Website",
+    description:
+      "My personal portfolio website built to showcase my skills, projects, learning journey and experience as a CSE student.",
+    image: "/images/portfolio.png",
+    technologies: ["Next.js", "React", "Tailwind CSS"],
+    live: "#",
+    github: "#",
+  },
+  {
+    title: "Book Library",
+    description:
+      "A modern book library web application where users can explore, manage and organize books through a clean and responsive interface.",
+    image: "/images/booklibrary.png",
+    technologies: ["N", "React", "Tailwind CSS"],
+    live: "https://lnkd.in/gvsvvCzc",
+    github: "https://lnkd.in/gbyrUynK",
+  },
+
+  {
+    title: "AI Model Hub",
+    description:
+      "A platform for discovering and exploring various AI models, with features for filtering, searching, and viewing model details.",
+    image: "/images/ai-hub.png",
+    technologies: ["Next.js", "React", "Tailwind CSS"],
+    live: "https://modelhub-ai.netlify.app/",
+    github: "https://lnkd.in/gbyrUynK",
+  },
+   
   {
     title: "GitHub Issues Tracker",
     description:
-      "A web application that fetches and displays GitHub issues using an API.",
-    tech: "JavaScript • Tailwind CSS • REST API",
+      "An API-based GitHub issues tracker that displays issues dynamically and helps users explore open and closed issues.",
+    image: "/images/github-issues.png",
+    technologies: ["JavaScript", "API", "Tailwind CSS"],
+    live: "https://lnkd.in/gM5BB4ck",
+    github: "https://lnkd.in/gRTVY4GR",
   },
-  {
-    title: "Job Tracker Website",
-    description:
-      "A responsive application for organizing and managing job applications.",
-    tech: "HTML • Tailwind CSS • JavaScript",
-  },
-  {
-    title: "Hotel Management System",
-    description:
-      "A C++ based hotel management system built using OOP concepts.",
-    tech: "C++ • OOP",
-  },
-  {
-    title: "ModelHub AI",
-    description:
-      "A React-based platform for exploring AI-related models and tools.",
-    tech: "React • JavaScript • Tailwind CSS",
-  },
+
+  
 ];
 
 export default function Projects() {
-  return (
-    <section id="projects" className="section">
+  const [visible, setVisible] = useState(false);
 
+  useEffect(() => {
+    const section = document.getElementById("projects");
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      {
+        threshold: 0.15,
+      }
+    );
+
+    if (section) {
+      observer.observe(section);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <section id="projects" className="section projects-section">
+      
+      {/* Heading */}
       <div className="section-title">
-        <span>My Work</span>
+        <span>My Recent Work</span>
+
         <h2>
-          Things I've <span className="gradient-text">Built</span>
+          Featured <span className="gradient-text">Projects</span>
         </h2>
       </div>
 
-      <div className="grid gap-6 md:grid-cols-2">
-
-        {projects.map((project) => (
+      {/* Projects */}
+      <div
+        className={`projects-grid ${
+          visible ? "projects-visible" : ""
+        }`}
+      >
+        {projects.map((project, index) => (
           <div
+            className="project-card"
             key={project.title}
-            className="glass-card p-7"
+            style={{
+              "--delay": `${index * 80}ms`,
+            }}
           >
-            <div className="mb-6 flex h-48 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-500/10 to-purple-500/10">
-              <span className="text-5xl">💻</span>
+            {/* Image */}
+            <div className="project-image-wrapper">
+              <img
+                src={project.image}
+                alt={project.title}
+                className="project-image"
+              />
+
+              <div className="project-image-overlay">
+                <span>View Project</span>
+              </div>
             </div>
 
-            <h3 className="text-2xl font-bold">
-              {project.title}
-            </h3>
+            {/* Content */}
+            <div className="project-content">
+              <h3>{project.title}</h3>
 
-            <p className="mt-4 leading-7 text-gray-400">
-              {project.description}
-            </p>
+              <p>{project.description}</p>
 
-            <p className="mt-5 text-sm text-cyan-400">
-              {project.tech}
-            </p>
+              {/* Technologies */}
+              <div className="project-tech">
+                {project.technologies.map((tech) => (
+                  <span key={tech}>{tech}</span>
+                ))}
+              </div>
 
-            <div className="mt-6 flex gap-3">
-              <button className="btn-primary">
-                Live Demo
-              </button>
+              {/* Buttons */}
+              <div className="project-buttons">
+                <a
+                  href={project.live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-live"
+                >
+                  Live Demo ↗
+                </a>
 
-              <button className="btn-secondary">
-                GitHub
-              </button>
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-github"
+                >
+                  GitHub ↗
+                </a>
+              </div>
             </div>
           </div>
         ))}
-
       </div>
     </section>
   );
