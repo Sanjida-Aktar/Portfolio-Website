@@ -586,3 +586,368 @@ body {
     opacity: 0;
   }
 }
+/* =========================================
+   SKILLS SECTION
+========================================= */
+
+.skills-section {
+  position: relative;
+}
+
+.skills-container {
+  width: 100%;
+  max-width: 1150px;
+
+  margin: 70px auto 0;
+
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+
+  gap: 100px;
+
+  align-items: start;
+}
+
+
+/* =========================================
+   HEADINGS
+========================================= */
+
+.technical-skills h3,
+.professional-skills h3 {
+  margin-bottom: 45px;
+
+  font-size: 28px;
+  font-weight: 700;
+
+  color: #f8fafc;
+}
+
+
+/* =========================================
+   TECHNICAL SKILLS
+========================================= */
+
+.technical-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 30px;
+}
+
+.technical-skill {
+  width: 100%;
+}
+
+.technical-skill-info {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 10px;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  color: #e2e8f0;
+}
+
+.technical-skill-info span:last-child {
+  color: #94a3b8;
+}
+
+
+/* Progress Background */
+
+.technical-bar {
+  position: relative;
+
+  width: 100%;
+  height: 8px;
+
+  border-radius: 999px;
+
+  background: rgba(139, 92, 246, 0.18);
+
+  overflow: visible;
+}
+
+
+/* Progress */
+
+.technical-bar-fill {
+  position: relative;
+
+  height: 100%;
+
+  border-radius: 999px;
+
+  background: linear-gradient(
+    90deg,
+    #06b6d4,
+    #22d3ee
+  );
+
+  box-shadow:
+    0 0 8px rgba(34, 211, 238, 0.8),
+    0 0 18px rgba(34, 211, 238, 0.4);
+
+  animation: skillBarAnimation 1.5s ease-out;
+}
+
+
+/* Small glowing end */
+
+.technical-bar-fill::after {
+  content: "";
+
+  position: absolute;
+
+  right: -4px;
+  top: 50%;
+
+  width: 10px;
+  height: 10px;
+
+  transform: translateY(-50%);
+
+  border-radius: 50%;
+
+  background: #22d3ee;
+
+  box-shadow:
+    0 0 8px #22d3ee,
+    0 0 18px #22d3ee;
+}
+
+
+@keyframes skillBarAnimation {
+  from {
+    width: 0;
+  }
+}
+
+
+/* =========================================
+   PROFESSIONAL SKILLS
+========================================= */
+
+.professional-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  column-gap: 60px;
+  row-gap: 45px;
+}
+
+
+.professional-skill {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+}
+
+
+/* =========================================
+   CIRCLE
+========================================= */
+
+.professional-circle {
+  position: relative;
+
+  width: 125px;
+  height: 125px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    conic-gradient(
+      #22d3ee var(--progress),
+      rgba(139, 92, 246, 0.18) var(--progress)
+    );
+
+  box-shadow:
+    0 0 15px rgba(34, 211, 238, 0.12);
+
+  animation: circleAnimation 1.2s ease-out;
+}
+
+
+/* Inner dark circle */
+
+.professional-circle-inner {
+  width: 103px;
+  height: 103px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #070b1b;
+
+  box-shadow:
+    inset 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+
+.professional-circle-inner span {
+  font-size: 20px;
+
+  font-weight: 600;
+
+  color: #f8fafc;
+}
+
+
+/* Circle glow */
+
+.professional-circle::before {
+  content: "";
+
+  position: absolute;
+
+  inset: -4px;
+
+  border-radius: 50%;
+
+  background: transparent;
+
+  box-shadow:
+    0 0 20px rgba(34, 211, 238, 0.18);
+
+  pointer-events: none;
+}
+
+
+/* Professional name */
+
+.professional-skill h4 {
+  margin-top: 16px;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  color: #e2e8f0;
+}
+
+
+@keyframes circleAnimation {
+  from {
+    transform: scale(0.75);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+/* =========================================
+   HOVER EFFECT
+========================================= */
+
+.technical-skill:hover .technical-skill-info span:first-child {
+  color: #22d3ee;
+
+  transition: color 0.3s ease;
+}
+
+
+.technical-skill:hover .technical-bar-fill {
+  box-shadow:
+    0 0 10px rgba(34, 211, 238, 0.9),
+    0 0 25px rgba(34, 211, 238, 0.5);
+}
+
+
+.professional-skill:hover .professional-circle {
+  transform: scale(1.08);
+
+  box-shadow:
+    0 0 20px rgba(34, 211, 238, 0.25),
+    0 0 40px rgba(139, 92, 246, 0.12);
+
+  transition: all 0.35s ease;
+}
+
+
+.professional-skill:hover h4 {
+  color: #22d3ee;
+
+  transition: color 0.3s ease;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+  .skills-container {
+    grid-template-columns: 1fr;
+
+    gap: 70px;
+  }
+
+  .professional-grid {
+    max-width: 550px;
+
+    margin: 0 auto;
+  }
+}
+
+
+@media (max-width: 640px) {
+  .skills-container {
+    margin-top: 50px;
+
+    gap: 55px;
+  }
+
+  .technical-skills h3,
+  .professional-skills h3 {
+    font-size: 24px;
+
+    margin-bottom: 35px;
+  }
+
+  .technical-list {
+    gap: 25px;
+  }
+
+  .professional-grid {
+    column-gap: 25px;
+    row-gap: 35px;
+  }
+
+  .professional-circle {
+    width: 105px;
+    height: 105px;
+  }
+
+  .professional-circle-inner {
+    width: 87px;
+    height: 87px;
+  }
+
+  .professional-circle-inner span {
+    font-size: 17px;
+  }
+}
