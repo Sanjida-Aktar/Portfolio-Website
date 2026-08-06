@@ -1,0 +1,725 @@
+/* =====================================================
+   THEME TOGGLE
+===================================================== */
+
+.theme-toggle {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  cursor: pointer;
+  font-size: 17px;
+
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.06);
+  border-color: rgba(34, 211, 238, 0.5);
+}
+
+
+/* =====================================================
+   LIGHT MODE
+===================================================== */
+
+html.light body {
+  background: #f8fafc !important;
+  color: #0f172a !important;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+html.light nav {
+  background: rgba(248, 250, 252, 0.88) !important;
+  border-color: rgba(15, 23, 42, 0.08) !important;
+}
+
+html.light nav a {
+  color: #475569 !important;
+}
+
+html.light nav a:hover {
+  color: #0891b2 !important;
+}
+
+html.light nav > div > a:first-child {
+  color: #0f172a !important;
+}
+
+
+/* Let's Talk */
+
+html.light nav .btn-primary {
+  color: white !important;
+}
+
+
+/* Mobile menu */
+
+html.light nav > div + div {
+  border-color: rgba(15, 23, 42, 0.08);
+}
+
+
+/* =====================================================
+   GENERAL TEXT
+===================================================== */
+
+html.light h1,
+html.light h2,
+html.light h3,
+html.light h4,
+html.light h5,
+html.light h6 {
+  color: #0f172a;
+}
+
+html.light p {
+  color: #475569;
+}
+
+
+/* =====================================================
+   SECTION
+===================================================== */
+
+html.light .section {
+  color: #0f172a;
+}
+
+
+/* =====================================================
+   GLASS CARDS
+===================================================== */
+
+html.light .glass-card {
+  background: rgba(255, 255, 255, 0.9) !important;
+
+  border-color: rgba(15, 23, 42, 0.08) !important;
+
+  color: #0f172a !important;
+
+  box-shadow:
+    0 15px 40px rgba(15, 23, 42, 0.07) !important;
+}
+
+html.light .glass-card h3 {
+  color: #0f172a !important;
+}
+
+html.light .glass-card p {
+  color: #475569 !important;
+}
+
+
+/* =====================================================
+   PROJECT CARDS
+===================================================== */
+
+html.light .project-card {
+  background: #ffffff !important;
+
+  border-color: rgba(15, 23, 42, 0.08) !important;
+
+  color: #0f172a !important;
+
+  box-shadow:
+    0 20px 45px rgba(15, 23, 42, 0.08) !important;
+}
+
+html.light .project-card h3 {
+  color: #0f172a !important;
+}
+
+html.light .project-card p {
+  color: #64748b !important;
+}
+/* =========================================
+   LIGHT MODE - ICONS
+========================================= */
+
+html.light svg {
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+/* Images / skill icons */
+html.light img {
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+
+/* =====================================================
+   SKILLS
+===================================================== */
+
+html.light .skill-card {
+  background: #ffffff !important;
+
+  border-color: rgba(15, 23, 42, 0.08) !important;
+
+  color: #0f172a !important;
+}
+
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+html.light .contact-form {
+  background: #ffffff !important;
+
+  border-color: rgba(15, 23, 42, 0.08) !important;
+
+  box-shadow:
+    0 20px 50px rgba(15, 23, 42, 0.07) !important;
+}
+
+html.light .contact-field label {
+  color: #334155 !important;
+}
+
+html.light .contact-field input,
+html.light .contact-field textarea {
+  background: #f8fafc !important;
+
+  border-color: rgba(15, 23, 42, 0.12) !important;
+
+  color: #0f172a !important;
+}
+
+html.light .contact-field input::placeholder,
+html.light .contact-field textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+html.light .footer-section {
+  background: #f1f5f9 !important;
+
+  border-color: rgba(15, 23, 42, 0.08) !important;
+
+  color: #0f172a !important;
+}
+
+
+/* Footer logo */
+
+html.light .footer-logo {
+  color: #0f172a !important;
+}
+
+html.light .footer-logo span {
+  color: #06b6d4 !important;
+}
+
+
+/* Footer headings */
+
+html.light .footer-navigation h4,
+html.light .footer-social h4 {
+  color: #0f172a !important;
+}
+
+
+/* Footer links */
+
+html.light .footer-links a,
+html.light .footer-social-links a {
+  color: #64748b !important;
+}
+
+html.light .footer-links a:hover,
+html.light .footer-social-links a:hover {
+  color: #0891b2 !important;
+}
+
+
+/* Footer description */
+
+html.light .footer-description {
+  color: #64748b !important;
+}
+
+
+/* Footer bottom */
+
+html.light .footer-bottom {
+  color: #64748b !important;
+}
+
+html.light .footer-bottom span {
+  color: #334155 !important;
+}
+
+
+/* =====================================================
+   BACK TO TOP
+===================================================== */
+
+html.light .back-to-top {
+  background: rgba(255, 255, 255, 0.9) !important;
+
+  border-color: rgba(15, 23, 42, 0.12) !important;
+
+  color: #0891b2 !important;
+
+  box-shadow:
+    0 10px 25px rgba(15, 23, 42, 0.08);
+}
+
+
+/* =====================================================
+   LIGHT MODE THEME BUTTON
+===================================================== */
+
+html.light .theme-toggle {
+  background: rgba(15, 23, 42, 0.05);
+
+  border-color: rgba(15, 23, 42, 0.12);
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+html.light .btn-secondary {
+  color: #334155 !important;
+
+  border-color: rgba(15, 23, 42, 0.15) !important;
+
+  background: rgba(255, 255, 255, 0.6) !important;
+}
+
+html.light .btn-secondary:hover {
+  color: #0891b2 !important;
+
+  border-color: rgba(34, 211, 238, 0.4) !important;
+}
+
+
+html.light .badge,
+html.light .tag {
+  color: #475569;
+}
+
+
+body,
+nav,
+section,
+footer,
+.glass-card,
+.project-card,
+.skill-card,
+.contact-form,
+input,
+textarea {
+  transition:
+    background-color 0.35s ease,
+    color 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+html.light a {
+  color: #334155;
+}
+
+html.light a:hover {
+  color: #0891b2;
+}
+
+html.light .gradient-text {
+  color: transparent;
+}
+
+
+
+html.light .btn-primary {
+  color: #ffffff !important;
+}
+
+html.light .navbar-link {
+  color: #334155 !important;
+}
+
+html.light .navbar-link:hover {
+  color: #0891b2 !important;
+}
+
+html.light .navbar-mobile-link {
+  color: #334155 !important;
+}
+
+html.light .navbar-mobile-link:hover {
+  color: #0891b2 !important;
+}
+
+html.light #about .border-cyan-400\/20 {
+  border-color: rgba(8, 145, 178, 0.35) !important;
+}
+
+html.light #about .bg-cyan-400\/5 {
+  background: rgba(8, 145, 178, 0.08) !important;
+}
+
+html.light #about .text-cyan-300 {
+  color: #0891b2 !important;
+}
+
+html.light #about .border-purple-400\/20 {
+  border-color: rgba(147, 51, 234, 0.35) !important;
+}
+
+html.light #about .bg-purple-400\/5 {
+  background: rgba(147, 51, 234, 0.08) !important;
+}
+
+html.light #about .text-purple-300 {
+  color: #7e22ce !important;
+}
+
+
+html.light #about .border-pink-400\/20 {
+  border-color: rgba(219, 39, 119, 0.35) !important;
+}
+
+html.light #about .bg-pink-400\/5 {
+  background: rgba(219, 39, 119, 0.08) !important;
+}
+
+html.light #about .text-pink-300 {
+  color: #db2777 !important;
+}
+
+/* Skill headings */
+html.light #skills h3,
+html.light #skills h4 {
+  color: #0f172a !important;
+}
+
+
+/* Skill text */
+html.light #skills p {
+  color: #475569 !important;
+}
+
+
+/* =========================================
+   TECHNICAL SKILLS
+========================================= */
+
+/* Skill names + percentage */
+html.light #skills .technical-skill-info span {
+  color: #334155 !important;
+}
+
+
+/* Technical progress track */
+html.light #skills .technical-bar {
+  background: #e0e7ff !important;
+}
+
+
+/* Technical progress */
+html.light #skills .technical-bar-fill {
+  background: #2563eb !important;
+  box-shadow: 0 0 10px rgba(37, 99, 235, 0.25) !important;
+}
+
+
+/* =========================================
+   PROFESSIONAL SKILLS
+========================================= */
+
+html.light #skills .professional-circle {
+  background: conic-gradient(
+    #2563eb var(--progress),
+    #e0e7ff var(--progress)
+  ) !important;
+}
+
+
+/* Inner circle */
+html.light #skills .professional-circle-inner {
+  background: #ffffff !important;
+  border: 1px solid rgba(37, 99, 235, 0.08);
+
+  color: #2563eb !important;
+
+  box-shadow:
+    inset 0 0 15px rgba(37, 99, 235, 0.05);
+}
+
+
+/* Percentage */
+html.light #skills .professional-circle-inner span {
+  color: #2563eb !important;
+}
+
+
+/* Professional skill names */
+html.light #skills .professional-skill h4 {
+  color: #334155 !important;
+}
+
+
+/* =========================================
+   SKILL CARDS
+========================================= */
+
+html.light #skills .glass-card {
+  background: #ffffff !important;
+
+  border-color: rgba(15, 23, 42, 0.08) !important;
+
+  box-shadow:
+    0 10px 30px rgba(15, 23, 42, 0.05);
+}
+
+
+/* =========================================
+   BLUE GLOW
+========================================= */
+
+html.light #skills .shadow-glow-cyan {
+  box-shadow:
+    0 0 12px rgba(37, 99, 235, 0.25) !important;
+}
+/* =========================================
+   PROJECT FEATURES - LIGHT MODE
+========================================= */
+
+html.light #projects .project-card span {
+  color: #2563eb !important;
+}
+
+
+/* Feature badge background */
+html.light #projects .project-card .bg-cyan-400\/10 {
+  background: rgba(37, 99, 235, 0.08) !important;
+}
+
+
+/* Feature badge border */
+html.light #projects .project-card .border-cyan-400\/20 {
+  border-color: rgba(37, 99, 235, 0.30) !important;
+}
+
+
+/* Purple feature */
+html.light #projects .project-card .bg-purple-400\/10 {
+  background: rgba(124, 58, 237, 0.08) !important;
+}
+
+html.light #projects .project-card .border-purple-400\/20 {
+  border-color: rgba(124, 58, 237, 0.30) !important;
+}
+
+
+/* Pink feature */
+html.light #projects .project-card .bg-pink-400\/10 {
+  background: rgba(219, 39, 119, 0.08) !important;
+}
+
+html.light #projects .project-card .border-pink-400\/20 {
+  border-color: rgba(219, 39, 119, 0.30) !important;
+}
+/* =========================================
+   JOURNEY - LIGHT MODE
+========================================= */
+
+/* Main subtitle */
+html.light #journey .journey-subtitle {
+  color: #64748b !important;
+}
+
+
+/* =========================================
+   JOURNEY CARD
+========================================= */
+
+html.light #journey .journey-card {
+  background: #ffffff !important;
+  border: 1px solid rgba(15, 23, 42, 0.10) !important;
+
+  color: #0f172a !important;
+
+  box-shadow:
+    0 15px 40px rgba(15, 23, 42, 0.07) !important;
+}
+
+
+/* Card title */
+
+html.light #journey .journey-card h3 {
+  color: #0f172a !important;
+}
+
+
+/* Card description */
+
+html.light #journey .journey-card p {
+  color: #64748b !important;
+}
+
+
+/* =========================================
+   YEAR
+========================================= */
+
+html.light #journey .journey-year {
+  color: #2563eb !important;
+}
+
+
+/* =========================================
+   TYPE / CATEGORY
+========================================= */
+
+html.light #journey .journey-type {
+  color: #7c3aed !important;
+
+  background: rgba(124, 58, 237, 0.07) !important;
+
+  border: 1px solid rgba(124, 58, 237, 0.25) !important;
+}
+
+
+/* =========================================
+   TAGS
+========================================= */
+
+html.light #journey .journey-tags span {
+  color: #2563eb !important;
+
+  background: rgba(37, 99, 235, 0.07) !important;
+
+  border: 1px solid rgba(37, 99, 235, 0.20) !important;
+}
+
+
+/* =========================================
+   TIMELINE
+========================================= */
+
+html.light #journey .journey-line {
+  background: linear-gradient(
+    to bottom,
+    rgba(37, 99, 235, 0.12),
+    #2563eb,
+    rgba(37, 99, 235, 0.12)
+  ) !important;
+}
+
+
+/* =========================================
+   TIMELINE DOT
+========================================= */
+
+html.light #journey .journey-dot {
+  background: #ffffff !important;
+
+  border: 2px solid #2563eb !important;
+
+  box-shadow:
+    0 0 15px rgba(37, 99, 235, 0.30) !important;
+}
+
+
+html.light #journey .journey-dot span {
+  background: #2563eb !important;
+}
+/* =========================================
+   CONTACT INFO - LIGHT MODE
+========================================= */
+
+/* Email & Location item */
+html.light #contact .contact-info-item {
+  color: #334155 !important;
+}
+
+
+/* Email / Location label */
+html.light #contact .contact-info-item span {
+  color: #64748b !important;
+  opacity: 1 !important;
+}
+
+
+/* Email address / Bangladesh */
+html.light #contact .contact-info-item strong {
+  color: #0f172a !important;
+  opacity: 1 !important;
+}
+
+
+/* Contact icons */
+html.light #contact .contact-icon {
+  color: #2563eb !important;
+
+  background: rgba(37, 99, 235, 0.08) !important;
+
+  border-color: rgba(37, 99, 235, 0.20) !important;
+
+  opacity: 1 !important;
+}
+
+
+/* Email link */
+html.light #contact a.contact-info-item {
+  color: #334155 !important;
+}
+
+
+/* Email hover */
+html.light #contact a.contact-info-item:hover strong {
+  color: #2563eb !important;
+}
+
+
+/* =========================================
+   CONTACT SOCIAL LINKS
+========================================= */
+
+html.light #contact .contact-socials a {
+  color: #334155 !important;
+  opacity: 1 !important;
+}
+
+html.light #contact .contact-socials a:hover {
+  color: #2563eb !important;
+}
+/* =========================================
+   SECTION SMALL HEADINGS - LIGHT MODE
+========================================= */
+
+html.light .section-title > span {
+  color: #2563eb !important;
+  opacity: 1 !important;
+}
+
+
+/* If some section uses paragraph as subtitle */
+html.light .section-title > p {
+  color: #475569 !important;
+  opacity: 1 !important;
+}

@@ -67,7 +67,7 @@ export default function Journey() {
   }, []);
 
   return (
-    <section id="journey" className="section journey-section">
+    <section id="journey" className="section journey-section mt-2">
 
       <div className="section-title">
         <span>My Journey</span>

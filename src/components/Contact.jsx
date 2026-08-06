@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { FaLocationArrow } from "react-icons/fa6";
+import { FaLinkedin, FaLocationArrow } from "react-icons/fa6";
 
 export default function Contact() {
   const [visible, setVisible] = useState(false);
@@ -109,6 +109,7 @@ export default function Contact() {
               target="_blank"
               rel="noopener noreferrer"
             >
+
               LinkedIn ↗
             </a>
 

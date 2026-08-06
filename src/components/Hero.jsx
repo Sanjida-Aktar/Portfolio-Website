@@ -79,7 +79,6 @@ const [isDeleting, setIsDeleting] = useState(false);
             turning ideas into real-world digital experiences.
           </p>
 
-          {/* Buttons */}
           <div className="mt-8 flex flex-wrap gap-4">
             <a href="#projects" className="btn-primary text-base">
               View My Work →
@@ -115,7 +114,6 @@ const [isDeleting, setIsDeleting] = useState(false);
           </div>
         </div>
 
-        {/* ================= RIGHT ================= */}
         <div className="order-1 flex justify-center lg:order-2 lg:justify-end">
           <div className="profile-wrapper">
             {/* Rotating Ring */}

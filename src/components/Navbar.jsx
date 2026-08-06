@@ -1,5 +1,6 @@
 "use client";
 
+import ThemeToggle from "./ThemeToggle";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
@@ -16,54 +17,144 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 z-50 w-full border-b border-white/10 bg-[#050816]/80 backdrop-blur-xl">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
+    <nav className="navbar fixed left-0 top-0 z-50 w-full border-b backdrop-blur-xl">
+      
+      {/* ================= NAVBAR CONTAINER ================= */}
 
-        <a href="#home" className="text-3xl font-bold gradient-text">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-6 sm:py-5">
+
+        {/* ================= LOGO ================= */}
+
+        <a
+          href="#home"
+          className="text-2xl font-bold gradient-text sm:text-3xl"
+        >
           Sanjida<span className="text-cyan-400">.</span>
         </a>
 
-        <div className="hidden items-center gap-8 md:flex">
+
+        {/* ================= DESKTOP LINKS ================= */}
+
+        <div className="hidden items-center gap-7 md:flex lg:gap-8">
           {links.map((link) => (
             <a
               key={link.name}
               href={link.href}
-              className="text-base text-gray-300 transition hover:text-cyan-400"
+              className="
+                navbar-link
+                text-sm
+                font-medium
+                transition-all
+                duration-300
+                lg:text-base
+              "
             >
               {link.name}
             </a>
           ))}
         </div>
 
-        <a
-          href="#contact"
-          className="!hidden lg:!inline-flex btn-primary"
-        >
-          Let's Talk
-        </a>
 
-        <button
-          onClick={() => setMenuOpen(!menuOpen)}
-          className="text-white md:hidden"
-        >
-          {menuOpen ? <X /> : <Menu />}
-        </button>
+        {/* ================= RIGHT SIDE ================= */}
+
+        <div className="flex items-center gap-3">
+
+          {/* Theme Toggle */}
+
+          <ThemeToggle />
+
+
+          {/* Let's Talk */}
+
+          <a
+            href="#contact"
+            className="
+              btn-primary
+              !hidden
+              lg:!inline-flex
+            "
+          >
+            Let's Talk
+          </a>
+
+
+          {/* Mobile Menu Button */}
+
+          <button
+            type="button"
+            onClick={() => setMenuOpen((prev) => !prev)}
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={menuOpen}
+            className="
+              navbar-menu-button
+              flex
+              h-10
+              w-10
+              items-center
+              justify-center
+              rounded-full
+              border
+              transition-all
+              duration-300
+              md:hidden
+            "
+          >
+            {menuOpen ? (
+              <X className="h-5 w-5" />
+            ) : (
+              <Menu className="h-5 w-5" />
+            )}
+          </button>
+
+        </div>
       </div>
 
-      {/* Mobile Menu */}
+
+      {/* ================= MOBILE MENU ================= */}
+
       {menuOpen && (
-        <div className="border-t border-white/10 bg-[#050816] px-6 py-5 md:hidden">
-          <div className="flex flex-col gap-4">
+        <div className="navbar-mobile-menu border-t px-5 py-5 backdrop-blur-xl md:hidden">
+
+          <div className="flex flex-col gap-1">
+
             {links.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
                 onClick={() => setMenuOpen(false)}
-                className="text-lg text-gray-300 hover:text-cyan-400"
+                className="
+                  navbar-mobile-link
+                  rounded-lg
+                  px-3
+                  py-3
+                  text-base
+                  font-medium
+                  transition-all
+                  duration-300
+                "
               >
                 {link.name}
               </a>
             ))}
+
+
+            {/* Mobile Let's Talk */}
+
+            <a
+              href="#contact"
+              onClick={() => setMenuOpen(false)}
+              className="
+                btn-primary
+                mt-3
+                w-full
+                justify-center
+                !py-3
+                lg:hidden
+              "
+            >
+              Let's Talk
+            </a>
+
           </div>
         </div>
       )}
