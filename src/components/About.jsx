@@ -62,7 +62,7 @@ export default function About() {
             <span className="gradient-text">
               Sanjida Aktar
             </span>{" "}
-            👋
+            
           </h3>
 
           <p className="mt-6 text-base leading-8 text-gray-400 sm:text-lg">

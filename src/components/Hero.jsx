@@ -57,7 +57,7 @@ const [isDeleting, setIsDeleting] = useState(false);
 
         <div className="hero-content order-2 lg:order-1">
           <p className="mb-5 text-lg font-medium text-cyan-400">
-            Hello, It's Me 👋
+            Hello, It's Me
           </p>
 
           <h1 className="text-5xl font-extrabold leading-[1.05] sm:text-6xl lg:text-7xl">
