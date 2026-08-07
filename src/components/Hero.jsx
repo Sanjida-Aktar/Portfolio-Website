@@ -89,24 +89,23 @@ const [isDeleting, setIsDeleting] = useState(false);
             </a>
           </div>
 
-          {/* Social */}
           <div className="mt-9 flex items-center gap-6">
             <a
-              href="#"
+              href="https://github.com/Sanjida-Aktar"
               className="social-link text-lg font-semibold text-gray-400 hover:text-cyan-400"
             >
               <FaGithub className="text-4xl" />
             </a>
 
             <a
-              href="#"
+              href="https://www.linkedin.com/in/swe-sanjida-aktar/"
               className="social-link text-lg font-semibold text-gray-400 hover:text-cyan-400"
             >
               <IoLogoLinkedin className="text-4xl" />
             </a>
 
             <a
-              href="#contact"
+              href="mailto:mst.sanjida.aktar.cnj.bd@gmail.com"
               className="social-link text-gray-400 hover:text-cyan-400"
             >
               <MdEmail className="text-4xl" />

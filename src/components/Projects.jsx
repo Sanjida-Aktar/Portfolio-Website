@@ -11,16 +11,16 @@ const projects = [
     image: "/images/portfolio.png",
     technologies: ["Next.js", "React", "Tailwind CSS"],
     live: "#",
-    github: "#",
+    github: "https://github.com/Sanjida-Aktar/Portfolio-Website",
   },
   {
     title: "Book Library",
     description:
       "A modern book library web application where users can explore, manage and organize books through a clean and responsive interface.",
     image: "/images/booklibrary.png",
-    technologies: ["N", "React", "Tailwind CSS"],
-    live: "https://lnkd.in/gvsvvCzc",
-    github: "https://lnkd.in/gbyrUynK",
+    technologies: ["Next.js","MongoDB", "React", "Tailwind CSS"],
+    live: "https://online-book-borowing.vercel.app/",
+    github: "https://github.com/Sanjida-Aktar/Online-Book-Borrow",
   },
 
   {
@@ -28,19 +28,19 @@ const projects = [
     description:
       "A platform for discovering and exploring various AI models, with features for filtering, searching, and viewing model details.",
     image: "/images/ai-hub.png",
-    technologies: ["Next.js", "React", "Tailwind CSS"],
+    technologies: ["React","JavaScript", "Tailwind CSS"],
     live: "https://modelhub-ai.netlify.app/",
-    github: "https://lnkd.in/gbyrUynK",
+    github: "https://github.com/Sanjida-Aktar/AI-Model-Hub",
   },
    
   {
     title: "GitHub Issues Tracker",
     description:
-      "An API-based GitHub issues tracker that displays issues dynamically and helps users explore open and closed issues.",
+      "An API-based GitHub issues tracker that displays issues dynamically and helps users explore open and closed issues. (Password:admin, Username: admin123)",
     image: "/images/github-issues.png",
     technologies: ["JavaScript", "API", "Tailwind CSS"],
-    live: "https://lnkd.in/gM5BB4ck",
-    github: "https://lnkd.in/gRTVY4GR",
+    live: "https://github-issues-web.netlify.app/",
+    github: "https://github.com/Sanjida-Aktar/Github-Issue-Traker",
   },
 
   
@@ -74,7 +74,6 @@ export default function Projects() {
   return (
     <section id="projects" className="section projects-section">
       
-      {/* Heading */}
       <div className="section-title">
         <span>My Recent Work</span>
 
@@ -83,7 +82,6 @@ export default function Projects() {
         </h2>
       </div>
 
-      {/* Projects */}
       <div
         className={`projects-grid ${
           visible ? "projects-visible" : ""
@@ -131,7 +129,7 @@ export default function Projects() {
                   rel="noopener noreferrer"
                   className="project-live"
                 >
-                  Live Demo ↗
+                  Live link ↗
                 </a>
 
                 <a
