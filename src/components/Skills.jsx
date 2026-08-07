@@ -1,5 +1,7 @@
 "use client";
 
+import ScrollReveal from "./ScrollReveal";
+
 const technicalSkills = [
   {
     name: "HTML",
@@ -66,42 +68,46 @@ const professionalSkills = [
   },
 ];
 
-function TechnicalSkill({ name, level }) {
+function TechnicalSkill({ name, level, delay }) {
   return (
-    <div className="technical-skill">
-      <div className="technical-skill-info">
-        <span>{name}</span>
-        <span>{level}%</span>
-      </div>
+    <ScrollReveal delay={delay}>
+      <div className="technical-skill">
+        <div className="technical-skill-info">
+          <span>{name}</span>
+          <span>{level}%</span>
+        </div>
 
-      <div className="technical-bar">
-        <div
-          className="technical-bar-fill"
-          style={{ width: `${level}%` }}
-        />
+        <div className="technical-bar">
+          <div
+            className="technical-bar-fill"
+            style={{ width: `${level}%` }}
+          />
+        </div>
       </div>
-    </div>
+    </ScrollReveal>
   );
 }
 
-function ProfessionalSkill({ name, level }) {
+function ProfessionalSkill({ name, level, delay }) {
   const circleStyle = {
     "--progress": `${level * 3.6}deg`,
   };
 
   return (
-    <div className="professional-skill">
-      <div
-        className="professional-circle"
-        style={circleStyle}
-      >
-        <div className="professional-circle-inner">
-          <span>{level}%</span>
+    <ScrollReveal delay={delay}>
+      <div className="professional-skill">
+        <div
+          className="professional-circle"
+          style={circleStyle}
+        >
+          <div className="professional-circle-inner">
+            <span>{level}%</span>
+          </div>
         </div>
-      </div>
 
-      <h4>{name}</h4>
-    </div>
+        <h4>{name}</h4>
+      </div>
+    </ScrollReveal>
   );
 }
 
@@ -111,49 +117,76 @@ export default function Skills() {
       id="skills"
       className="section skills-section"
     >
-      {/* Section Heading */}
-      <div className="section-title">
-        <span>Technical and Professional</span>
 
-        <h2>
-          My <span className="gradient-text">Skills</span>
-        </h2>
-      </div>
+      {/* ================= SECTION HEADING ================= */}
 
-      {/* Skills Content */}
+      <ScrollReveal>
+        <div className="section-title">
+          <span>Technical and Professional</span>
+
+          <h2>
+            My{" "}
+            <span className="gradient-text">
+              Skills
+            </span>
+          </h2>
+        </div>
+      </ScrollReveal>
+
+
+      {/* ================= SKILLS CONTENT ================= */}
+
       <div className="skills-container">
 
         {/* ================= TECHNICAL ================= */}
+
         <div className="technical-skills">
-          <h3>Technical Skills</h3>
+
+          <ScrollReveal delay={0.1}>
+            <h3>Technical Skills</h3>
+          </ScrollReveal>
 
           <div className="technical-list">
-            {technicalSkills.map((skill) => (
+
+            {technicalSkills.map((skill, index) => (
               <TechnicalSkill
                 key={skill.name}
                 name={skill.name}
                 level={skill.level}
+                delay={0.15 + index * 0.08}
               />
             ))}
+
           </div>
+
         </div>
 
+
         {/* ================= PROFESSIONAL ================= */}
+
         <div className="professional-skills">
-          <h3>Professional Skills</h3>
+
+          <ScrollReveal delay={0.15}>
+            <h3>Professional Skills</h3>
+          </ScrollReveal>
 
           <div className="professional-grid">
-            {professionalSkills.map((skill) => (
+
+            {professionalSkills.map((skill, index) => (
               <ProfessionalSkill
                 key={skill.name}
                 name={skill.name}
                 level={skill.level}
+                delay={0.2 + index * 0.1}
               />
             ))}
+
           </div>
+
         </div>
 
       </div>
+
     </section>
   );
 }

@@ -2595,3 +2595,24 @@ body {
     margin-top: 0;
   }
 }
+@media (max-width: 640px) {
+  .profile-wrapper {
+    transform: none !important;
+    animation: none !important;
+  }
+
+  .profile-image {
+    animation: imageFloatMobile 5s ease-in-out infinite;
+  }
+
+  @keyframes imageFloatMobile {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-6px);
+    }
+  }
+}
